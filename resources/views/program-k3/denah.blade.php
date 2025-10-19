@@ -38,10 +38,6 @@
                     <div class="card-body">
                         <h5 class="card-title">Fasilitas Keselamatan</h5>
                         <div class="mb-3">
-                            <h6><i class="fas fa-sign-out-alt me-2 text-danger"></i>Jalur Evakuasi</h6>
-                            <p>Jalur jelas menuju titik kumpul darurat</p>
-                        </div>
-                        <div class="mb-3">
                             <h6><i class="fas fa-fire-extinguisher me-2 text-warning"></i>Lokasi APAR</h6>
                             <p>Alat pemadam api tersedia di titik strategis</p>
                         </div>
@@ -49,10 +45,7 @@
                             <h6><i class="fas fa-first-aid me-2 text-success"></i>Kotak P3K</h6>
                             <p>Tersedia di setiap area kerja dan ruang administrasi</p>
                         </div>
-                        <div class="mb-3">
-                            <h6><i class="fas fa-bell me-2 text-info"></i>Alarm Kebakaran</h6>
-                            <p>Sistem peringatan dini di seluruh area</p>
-                        </div>
+                       
                         <div class="mb-3">
                             <h6><i class="fas fa-map-marker-alt me-2 text-primary"></i>Titik Kumpul</h6>
                             <p>Area aman untuk berkumpul saat keadaan darurat</p>
@@ -65,12 +58,11 @@
         <div class="card card-k3 mt-4">
             <div class="card-body text-center">
                 <h5 class="card-title">Denah Visual Perusahaan</h5>
-                <p class="text-muted">[Gambar denah lokasi akan ditampilkan di sini]</p>
+                <p class="text-muted"></p>
                 <div class="bg-light py-5 rounded">
-                    <i class="fas fa-map fa-3x text-muted"></i>
+                    <img src="{{ asset('assets/denah.png') }}" alt="Denah Visual I2N Resec" class="img-fluid mx-auto d-block" style="max-height:480px;">
                     <p class="mt-3">Denah visual tata letak I2N Resec</p>
                 </div>
-                <p class="mt-3"><small>Anda dapat menambahkan gambar denah aktual perusahaan Anda di sini</small></p>
             </div>
         </div>
     </div>
