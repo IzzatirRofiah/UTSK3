@@ -222,33 +222,46 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
+  
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid px-4">
+        <!-- Back button at far left with increased padding -->
+        <div class="d-flex align-items-center">
+            <a href="{{ route('home') }}" class="btn btn-outline-primary me-5">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+        
+        <!-- Centered brand/logo with increased spacing -->
+        <div class="navbar-brand-wrapper mx-auto ps-5">
             <a class="navbar-brand" href="/">
                 <i class="fas fa-car me-2"></i>
                 I2N Resec
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('tentang') ? 'active' : '' }}" href="/#tentang">Tentang
-                            Kami</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('program-k3*') ? 'active' : '' }}"
-                            href="/#program-k3">Program K3</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </nav>
+
+        <!-- Navigation items -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('tentang') ? 'active' : '' }}" href="/#tentang">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('program-k3*') ? 'active' : '' }}" href="/#program-k3">Program K3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 
     @yield('content')
 
