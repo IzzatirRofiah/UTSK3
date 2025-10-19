@@ -16,11 +16,6 @@ class K3Controller extends Controller
         return view('tentang');
     }
 
-    public function pendahuluan()
-    {
-        return view('program-k3.pendahuluan');
-    }
-
     public function landasanHukum()
     {
         $regulations = [
