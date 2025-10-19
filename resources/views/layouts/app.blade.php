@@ -28,6 +28,27 @@
             background: var(--light);
         }
 
+        /* Tambahan: background ikon seragam */
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: white;
+            background: var(--gradient);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .icon-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+        }
+
         .navbar {
             background: white !important;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
