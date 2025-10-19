@@ -2,12 +2,15 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(135deg, rgba(26,54,93,0.9) 0%, rgba(45,90,154,0.9) 100%), url('https://images.unsplash.com/photo-1565689228866-1d7afc45b63f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+    <section class="hero-section" style="background: linear-gradient(135deg, rgba(120, 100, 200, 0.9) 0%, rgba(160, 180, 240, 0.9) 100%), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">   
+
+ ">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
                     <h1 class="display-4 fw-bold mb-4">Tentang I2N Resec</h1>
-                    <p class="lead">Perusahaan Jasa Service dan Retail Mobil dengan Komitmen Tinggi pada Keselamatan & Kesehatan Kerja</p>
+                    <p class="lead">Perusahaan Jasa Service dan Retail Mobil dengan Komitmen Tinggi pada Keselamatan &
+                        Kesehatan Kerja</p>
                 </div>
             </div>
         </div>
@@ -19,8 +22,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h2 class="section-title">Profil Perusahaan</h2>
-                    <p class="lead">I2N Resec adalah perusahaan yang bergerak di bidang otomotif dengan sistem 3S (Sales, Services, Spareparts) yang terintegrasi.</p>
-                    
+                    <p class="lead">I2N Resec adalah perusahaan yang bergerak di bidang otomotif dengan sistem 3S (Sales,
+                        Services, Spareparts) yang terintegrasi.</p>
+
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="d-flex align-items-center mb-3">
@@ -71,14 +75,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="card card-modern">
                         <div class="card-body p-4">
                             <h5 class="card-title">Visi & Misi</h5>
                             <div class="mb-4">
                                 <h6 class="text-primary">Visi</h6>
-                                <p>Menjadi perusahaan otomotif terdepan yang mengutamakan keselamatan dan kesejahteraan seluruh stakeholder.</p>
+                                <p>Menjadi perusahaan otomotif terdepan yang mengutamakan keselamatan dan kesejahteraan
+                                    seluruh stakeholder.</p>
                             </div>
                             <div>
                                 <h6 class="text-primary">Misi</h6>
@@ -103,12 +108,13 @@
                 <h2 class="section-title d-inline-block">Tim Kami</h2>
                 <p class="lead">Professional muda yang berdedikasi dalam mengembangkan perusahaan</p>
             </div>
-            
+
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card card-modern text-center">
                         <div class="card-body p-4">
-                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3" style="width: 100px; height: 100px;">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3"
+                                style="width: 100px; height: 100px;">
                                 <i class="fas fa-user fa-2x"></i>
                             </div>
                             <h5 class="card-title">Izzatir Rofi'ah</h5>
@@ -117,11 +123,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card card-modern text-center">
                         <div class="card-body p-4">
-                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3" style="width: 100px; height: 100px;">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3"
+                                style="width: 100px; height: 100px;">
                                 <i class="fas fa-user fa-2x"></i>
                             </div>
                             <h5 class="card-title">M. Ircham Daffansyah</h5>
@@ -130,11 +137,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card card-modern text-center">
                         <div class="card-body p-4">
-                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3" style="width: 100px; height: 100px;">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3"
+                                style="width: 100px; height: 100px;">
                                 <i class="fas fa-user fa-2x"></i>
                             </div>
                             <h5 class="card-title">Nazwa Nurul Wijaya</h5>
@@ -156,14 +164,19 @@
                         <div class="card-body p-5">
                             <h3 class="card-title text-center mb-4">Deskripsi Bisnis</h3>
                             <p class="card-text">
-                                Perusahaan yang kami pilih terfokus pada otomotif dengan sistem 3S (Sales, Services, Spareparts). 
-                                Kegiatan operasionalnya tidak hanya terbatas pada penjualan unit kendaraan, tetapi juga mencakup 
+                                Perusahaan yang kami pilih terfokus pada otomotif dengan sistem 3S (Sales, Services,
+                                Spareparts).
+                                Kegiatan operasionalnya tidak hanya terbatas pada penjualan unit kendaraan, tetapi juga
+                                mencakup
                                 layanan purna jual yang kompleks di area bengkel (workshop).
                             </p>
                             <p class="card-text">
-                                Area servis inilah yang menjadi pusat kegiatan teknis dengan berbagai potensi risiko kecelakaan 
-                                dan penyakit akibat kerja, mulai dari bahaya mekanik, kimiawi, hingga ergonomis. Oleh karena itu, 
-                                penerapan sistem Keselamatan dan Kesehatan Kerja (K3) yang komprehensif menjadi faktor krusial 
+                                Area servis inilah yang menjadi pusat kegiatan teknis dengan berbagai potensi risiko
+                                kecelakaan
+                                dan penyakit akibat kerja, mulai dari bahaya mekanik, kimiawi, hingga ergonomis. Oleh karena
+                                itu,
+                                penerapan sistem Keselamatan dan Kesehatan Kerja (K3) yang komprehensif menjadi faktor
+                                krusial
                                 untuk melindungi tenaga kerja dan memastikan kelancaran operasional perusahaan.
                             </p>
                             <div class="text-center mt-4">

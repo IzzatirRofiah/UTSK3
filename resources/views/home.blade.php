@@ -1,30 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="hero-section" id="home"
-       style="
-        background: linear-gradient(135deg, rgba(120, 100, 200, 0.9) 0%, rgba(160, 180, 240, 0.9) 100%),
-        /* background-size: cover; */
-        background-position: center;
- ">
+    <section class="hero-section"
+        style="background: linear-gradient(135deg, rgba(120, 100, 200, 0.9) 0%, rgba(160, 180, 240, 0.9) 100%), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
 
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-                <h1 class="display-4 fw-bold mb-4 text-white">Keselamatan & Kesehatan Kerja Prioritas Kami</h1>
-                <p class="lead mb-5 text-white">I2N Resec berkomitmen menciptakan lingkungan kerja yang aman, sehat, dan
-                    nyaman bagi seluruh karyawan dan pelanggan dengan standr tertinggi.</p>
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="#program-k3" class="btn btn-outline-light btn-lg border-2">Pelajari K3 Kami</a>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4 text-white">Keselamatan & Kesehatan Kerja Prioritas Kami</h1>
+                    <p class="lead mb-5 text-white">I2N Resec berkomitmen menciptakan lingkungan kerja yang aman, sehat, dan
+                        nyaman bagi seluruh karyawan dan pelanggan dengan standr tertinggi.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#program-k3" class="btn btn-outline-light btn-lg border-2">Pelajari K3 Kami</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                <div class="text-center">
-                    <img src="{{ asset('assets/logo1.png') }}" alt="Auto Service Safety" class="img-fluid rounded-3">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="text-center">
+                        <img src="{{ asset('assets/logo1.png') }}" alt="Auto Service Safety" class="img-fluid rounded-3">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
 
@@ -150,7 +146,8 @@
                                 <i class="fas fa-gavel"></i>
                             </div>
                             <h5 class="card-title">Landasan Hukum</h5>
-                            <p class="card-text flex-grow-1">Dasar hukum dan regulasi penerapan K3 di perusahaan otomotif</p>
+                            <p class="card-text flex-grow-1">Dasar hukum dan regulasi penerapan K3 di perusahaan otomotif
+                            </p>
                             <div class="mt-auto">
                                 <a href="/program-k3/landasan-hukum" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
                             </div>
@@ -166,7 +163,8 @@
                                 <i class="fas fa-hard-hat"></i>
                             </div>
                             <h5 class="card-title">Alat Pelindung Diri</h5>
-                            <p class="card-text flex-grow-1">Jenis dan penggunaan APD yang tepat di lingkungan bengkel mobil</p>
+                            <p class="card-text flex-grow-1">Jenis dan penggunaan APD yang tepat di lingkungan bengkel
+                                mobil</p>
                             <div class="mt-auto">
                                 <a href="/program-k3/apd" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
                             </div>
@@ -182,7 +180,8 @@
                                 <i class="fas fa-map-marked-alt"></i>
                             </div>
                             <h5 class="card-title">Denah Lokasi</h5>
-                            <p class="card-text flex-grow-1">Tata letak dan zonasi area kerja untuk optimalisasi keselamatan</p>
+                            <p class="card-text flex-grow-1">Tata letak dan zonasi area kerja untuk optimalisasi
+                                keselamatan</p>
                             <div class="mt-auto">
                                 <a href="/program-k3/denah" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
                             </div>
@@ -198,7 +197,8 @@
                                 <i class="fas fa-first-aid"></i>
                             </div>
                             <h5 class="card-title">P3K</h5>
-                            <p class="card-text flex-grow-1">Pertolongan Pertama Pada Kecelakaan Kerja di lingkungan bengkel</p>
+                            <p class="card-text flex-grow-1">Pertolongan Pertama Pada Kecelakaan Kerja di lingkungan
+                                bengkel</p>
                             <div class="mt-auto">
                                 <a href="/program-k3/p3k" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
                             </div>
@@ -214,7 +214,8 @@
                                 <i class="fas fa-exclamation-triangle"></i>
                             </div>
                             <h5 class="card-title">Faktor Keselamatan</h5>
-                            <p class="card-text flex-grow-1">Faktor-faktor yang mempengaruhi keselamatan kerja di bengkel</p>
+                            <p class="card-text flex-grow-1">Faktor-faktor yang mempengaruhi keselamatan kerja di bengkel
+                            </p>
                             <div class="mt-auto">
                                 <a href="/faktor-keselamatan" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
                             </div>
