@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts2.app')
 
 @section('content')
     <!-- Hero Section -->
@@ -178,5 +178,28 @@
             color: white;
             border-color: var(--primary);
         }
+        /* === Ikon APD Seragam (lingkaran gradasi seperti contoh) === */
+.apd-card .card-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.apd-card .card-icon i {
+    color: white !important;
+    font-size: 2rem;
+}
+
+.apd-card .card-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.4);
+}
     </style>
 @endsection

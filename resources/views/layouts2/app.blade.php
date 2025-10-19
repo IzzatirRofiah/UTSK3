@@ -10,13 +10,16 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #00b894;
-            --primary-dark: #00a085;
-            --secondary: #0984e3;
-            --accent: #e17055;
+            --primary: #667eea;
+            --primary-dark: #764ba2;
+            --secondary: #f093fb;
+            --accent: #ff6b6b;
             --light: #f8f9fa;
-            --dark: #2d3436;
-            --success: #38a169;
+            --dark: #2d3748;
+            --success: #4fd1c7;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #ff6b6b 0%, #f093fb 100%);
+            --gradient-secondary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
 
         body {
@@ -25,38 +28,112 @@
             background: var(--light);
         }
 
+        /* Tambahan: background ikon seragam */
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: white;
+            background: var(--gradient);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .icon-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+        }
+
         .navbar {
             background: white !important;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             padding: 1rem 0;
+            z-index: 2000;
         }
 
         .navbar-brand {
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--dark) !important;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
+        /* Kode CSS untuk menimpa ikon mobil (jika masih muncul) */
+        .navbar-brand::before {
+            content: none !important;
+        }
+
+        .navbar-brand img {
+            width: 55px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Navbar layout */
+        .navbar-nav {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        /* Nav link base */
         .nav-link {
+            display: inline-block;
             font-weight: 500;
-            margin: 0 0.5rem;
-            border-radius: 8px; 
-            transition: all 0.3s ease;
-            color: #666666 !important;
+            margin: 0;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: color 0.18s ease;
+            color: #666666 !important; /* Warna teks normal */
+            background: transparent;
+            z-index: 1;
+            pointer-events: auto;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .nav-link:hover,
+        /* PERUBAHAN: Active: Menjadikan warna teks abu-abu normal tanpa kotak */
         .nav-link.active {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
+            color: #666666 !important; /* Diubah menjadi abu-abu normal */
+            font-weight: 500; /* Bobot huruf normal */
+            background: transparent;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* PERUBAHAN: Menghilangkan efek hover (transform, box-shadow, background) */
+        .nav-link:hover {
+            color: #444444 !important; /* Sedikit lebih gelap saat hover */
+            background: transparent;
+            transform: none;
+            box-shadow: none;
+            z-index: 1;
+        }
+
+        /* Active item should not lift on hover */
+        .nav-link.active:hover {
+            transform: none;
+            box-shadow: none;
+            color: #666666 !important; /* Pertahankan warna abu-abu normal saat active dan di-hover */
         }
 
         .hero-section {
-            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(45, 90, 154, 0.9) 100%),
-                url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -89,7 +166,7 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: var(--accent);
+            background: var(--gradient);
             border-radius: 2px;
         }
 
@@ -107,208 +184,117 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .card-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: white;
-            font-size: 2rem;
-        }
+        .card-icon { width: 80px; height: 80px; border-radius: 50%; background: var(--gradient); display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; color:white; font-size:2rem; }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            border: none;
-            border-radius: 8px;
-            padding: 12px 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+        .btn-primary { background: var(--gradient); border: none; border-radius: 8px; padding: 12px 30px; font-weight: 600; transition: all 0.3s ease; color: white; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(102,126,234,0.4); color: white; }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(45, 90, 154, 0.3);
-        }
+        .btn-accent { background: var(--gradient-accent); border: none; border-radius: 8px; padding: 12px 30px; font-weight: 600; color: white; transition: all 0.3s ease; }
+        .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255,107,107,0.4); color: white; }
 
-        .btn-accent {
-            background: linear-gradient(135deg, var(--accent) 0%, #c53030 100%);
-            border: none;
-            border-radius: 8px;
-            padding: 12px 30px;
-            font-weight: 600;
-            color: white;
-            transition: all 0.3s ease;
-        }
+        .footer { background: var(--dark); color: white; padding: 60px 0 30px; }
 
-        .btn-accent:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(229, 62, 62, 0.3);
-            color: white;
-        }
+        .feature-box { text-align:center; padding:2rem; border-radius:16px; background:white; box-shadow:0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height:100%; }
+        .feature-box:hover { transform: translateY(-5px); box-shadow:0 12px 40px rgba(0,0,0,0.15); }
 
-        .footer {
-            background: var(--primary-dark);
-            color: white;
-            padding: 60px 0 30px;
-        }
+        .law-card { border-left: 4px solid var(--primary); transition: all 0.3s ease; cursor: pointer; }
+        .law-card:hover { border-left-color: var(--accent); transform: translateX(5px); }
 
-        .feature-box {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 16px;
-            background: white;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
+        .dropdown-menu { border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 12px; padding:1rem; }
+        .dropdown-item { border-radius: 8px; margin: 0.2rem 0; transition: all 0.3s ease; }
+        .dropdown-item:hover { background: var(--light); transform: translateX(5px); }
 
-        .feature-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
+        .floating-btn { position: fixed; bottom: 2rem; right: 2rem; width:60px; height:60px; border-radius:50%; background:var(--gradient-accent); color:white; border:none; box-shadow:0 8px 25px rgba(255,107,107,0.4); z-index:1000; transition: all 0.3s ease; }
+        .floating-btn:hover { transform: scale(1.1); }
 
-        .law-card {
-            border-left: 4px solid var(--primary);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+        .stats-number { font-size:3rem; font-weight:700; background:var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; line-height:1; }
 
-        .law-card:hover {
-            border-left-color: var(--accent);
-            transform: translateX(5px);
-        }
-
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            border-radius: 12px;
-            padding: 1rem;
-        }
-
-        .dropdown-item {
-            border-radius: 8px;
-            margin: 0.2rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .dropdown-item:hover {
-            background: var(--light);
-            transform: translateX(5px);
-        }
-
-        .floating-btn {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, #c53030 100%);
-            color: white;
-            border: none;
-            box-shadow: 0 8px 25px rgba(229, 62, 62, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .floating-btn:hover {
-            transform: scale(1.1);
-        }
+        .k3-logo { width:80px; height:80px; background:white; border-radius:20px; display:flex; align-items:center; justify-content:center; margin:0 auto 2rem; box-shadow:0 15px 35px rgba(0,0,0,0.1); }
+        .k3-logo img { width:50px; height:50px; object-fit:contain; }
     </style>
 </head>
 
 <body>
-  
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container-fluid px-4">
-        <!-- Back button at far left with increased padding -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <!-- Back button at far left with increased padding -->
         <div class="d-flex align-items-center">
             <a href="{{ route('home') }}" class="btn btn-outline-primary me-5">
                 <i class="fas fa-arrow-left"></i> Back
             </a>
         </div>
-        
-        <!-- Centered brand/logo with increased spacing -->
-        <div class="navbar-brand-wrapper mx-auto ps-5">
             <a class="navbar-brand" href="/">
-                <i class="fas fa-car me-2"></i>
+                <img
+                    src="{{ asset('assets/logo.png') }}"
+                    alt="I2N Resec Logo"
+                    onerror="this.style.display='none'"
+                    style="width: 30px; height: auto;">
                 I2N Resec
             </a>
-        </div>
 
-        <!-- Navigation items -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Beranda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('tentang') ? 'active' : '' }}" href="/#tentang">Tentang Kami</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('program-k3*') ? 'active' : '' }}" href="/#program-k3">Program K3</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('tentang') || (request()->is('/') && Str::contains(request()->getRequestUri(), '#tentang')) ? 'active' : '' }}" href="/#tentang">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('program-k3*') || (request()->is('/') && Str::contains(request()->getRequestUri(), '#program-k3')) ? 'active' : '' }}" href="/#program-k3">Program K3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     @yield('content')
 
-    <!-- Floating Action Button -->
     <button class="floating-btn" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h4 class="mb-3">I2N Resec</h4>
-                    <p>Perusahaan Jasa Service dan Retail Mobil yang berkomitmen pada Keselamatan dan Kesehatan Kerja
-                        dengan standar tertinggi.</p>
-                    <div class="mt-3">
-                        <a href="#" class="text-white me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5 class="mb-3">Kontak</h5>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Malang, Jawa Timur</p>
-                    <p><i class="fas fa-phone me-2"></i> (0341) 123-4567</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@i2nresec.com</p>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5 class="mb-3">Tim Perusahaan</h5>
-                    <div class="row">
-                        <div class="col-6">
-                            <p>Izzatir Rofi'ah</p>
-                            <p>Nazwa Nurul Wijaya</p>
-                        </div>
-                        <div class="col-6">
-                            <p>M. Ircham Daffansyah</p>
-                        </div>
-                    </div>
+<footer class="footer" style="background: linear-gradient(135deg, rgba(120, 100, 200, 0.9) 0%, rgba(89, 0, 255, 0.9) 100%);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h4 class="mb-3 text-white">I2N Resec</h4>
+                <p class="text-white">Perusahaan Jasa Service dan Retail Mobil yang berkomitmen pada Keselamatan dan Kesehatan Kerja dengan standar tertinggi.</p>
+                <div class="mt-3">
+                    <a href="#" class="text-white me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
                 </div>
             </div>
-            <hr class="my-4" style="background-color: rgba(255,255,255,0.2);">
-            <div class="text-center">
-                <p>&copy; 2025 I2N Resec - Program K3. All rights reserved.</p>
+            <div class="col-lg-4 mb-4">
+                <h5 class="mb-3 text-white">Kontak</h5>
+                <p class="text-white"><i class="fas fa-map-marker-alt me-2 text-white"></i> Malang, Jawa Timur</p>
+                <p class="text-white"><i class="fas fa-phone me-2 text-white"></i> (0341) 123-4567</p>
+                <p class="text-white"><i class="fas fa-envelope me-2 text-white"></i> info@i2nresec.com</p>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h5 class="mb-3 text-white">Tim Perusahaan</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="text-white mb-1">Izzatir Rofi'ah</p>
+                        <p class="text-white mb-1">Nazwa Nurul Wijaya</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="text-white mb-1">M. Ircham Daffansyah</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+        <hr class="my-4" style="background-color: rgba(255,255,255,0.3);">
+        <div class="text-center">
+            <p class="text-white mb-0">&copy; 2025 I2N Resec - Program K3. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -341,11 +327,8 @@
 
         // PDF viewer function
         function viewPDF(title, url) {
-            // In a real application, you would open a modal with PDF.js
             alert(`Membuka PDF: ${title}\nURL: ${url}`);
-            // window.open(url, '_blank'); // Uncomment untuk buka di tab baru
         }
     </script>
 </body>
-
 </html>
