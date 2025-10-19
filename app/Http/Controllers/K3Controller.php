@@ -16,11 +16,6 @@ class K3Controller extends Controller
         return view('tentang');
     }
 
-    public function pendahuluan()
-    {
-        return view('program-k3.pendahuluan');
-    }
-
     public function landasanHukum()
     {
         $regulations = [
@@ -73,8 +68,13 @@ class K3Controller extends Controller
         return view('program-k3.denah');
     }
 
+    public function p3k()
+    {
+        return view('program-k3.p3k');
+    }
+
     public function faktorKeselamatan()
-{
-    return view('faktor-keselamatan');
-}
+    {
+        return view('faktor-keselamatan');
+    }
 }
