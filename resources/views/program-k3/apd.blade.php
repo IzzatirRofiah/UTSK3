@@ -130,6 +130,39 @@
                     'Ganti jika terdapat kerusakan atau sobek'
                 ],
                 maintenance: 'Cuci bersih setelah digunakan, keringkan secara alami, simpan di tempat kering.'
+            },
+            'Sepatu Safety': {
+                icon: 'shoe-prints',
+                function: 'Melindungi kaki dari benda berat, tajam, lantai licin, dan tumpahan bahan kimia.',
+                usage: [
+                    'Pastikan ukuran sepatu sesuai dan nyaman',
+                    'Ikat tali sepatu dengan kuat dan rapi',
+                    'Periksa sol sepatu tidak aus atau rusak',
+                    'Gunakan untuk semua aktivitas di bengkel'
+                ],
+                maintenance: 'Bersihkan dengan sikat dan air sabun, keringkan di tempat teduh, beri semir khusus sepatu safety.'
+            },
+            'Rompi Reflektif': {
+                icon: 'vest',
+                function: 'Meningkatkan visibilitas pekerja di area bengkel yang gelap atau ramai kendaraan.',
+                usage: [
+                    'Kenakan rompi di atas pakaian kerja',
+                    'Pastikan bagian reflektif tidak tertutup',
+                    'Tutup resleting atau kancing dengan rapat',
+                    'Gunakan terutama di area parkir dan jalan keluar-masuk'
+                ],
+                maintenance: 'Cuci dengan air dingin dan deterjen lembut, jangan gunakan pemutih, keringkan di tempat teduh.'
+            },
+            'Masker/Respirator': {
+                icon: 'lungs',
+                function: 'Melindungi sistem pernapasan dari debu, asap, uap kimia, dan partikel berbahaya.',
+                usage: [
+                    'Pilih jenis masker sesuai tingkat paparan',
+                    'Pastikan masker menutup hidung dan mulut dengan rapat',
+                    'Ganti filter secara berkala sesuai petunjuk',
+                    'Lakukan fit test untuk memastikan kebocoran'
+                ],
+                maintenance: 'Ganti masker sekali pakai setelah digunakan, bersihkan masker reusable dengan alkohol, simpan dalam wadah tertutup.'
             }
         };
 
@@ -179,27 +212,27 @@
             border-color: var(--primary);
         }
         /* === Ikon APD Seragam (lingkaran gradasi seperti contoh) === */
-.apd-card .card-icon {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: var(--gradient);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
-    transition: all 0.3s ease;
-}
+        .apd-card .card-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
 
-.apd-card .card-icon i {
-    color: white !important;
-    font-size: 2rem;
-}
+        .apd-card .card-icon i {
+            color: white !important;
+            font-size: 2rem;
+        }
 
-.apd-card .card-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.4);
-}
+        .apd-card .card-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(118, 75, 162, 0.4);
+        }
     </style>
 @endsection

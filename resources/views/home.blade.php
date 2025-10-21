@@ -9,7 +9,7 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <h1 class="display-4 fw-bold mb-4 text-white">Keselamatan & Kesehatan Kerja Prioritas Kami</h1>
                     <p class="lead mb-5 text-white">I2N Resec berkomitmen menciptakan lingkungan kerja yang aman, sehat, dan
-                        nyaman bagi seluruh karyawan dan pelanggan dengan standr tertinggi.</p>
+                        nyaman bagi seluruh karyawan dan pelanggan dengan standart tertinggi.</p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#program-k3" class="btn btn-outline-light btn-lg border-2">Pelajari K3 Kami</a>
                     </div>
