@@ -2,9 +2,10 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(135deg, rgba(120, 100, 200, 0.9) 0%, rgba(160, 180, 240, 0.9) 100%), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">   
+    <section class="hero-section"
+        style="background: linear-gradient(135deg, rgba(120, 100, 200, 0.9) 0%, rgba(160, 180, 240, 0.9) 100%), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
 
- ">
+        ">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
@@ -108,14 +109,30 @@
                 <h2 class="section-title d-inline-block">Tim Kami</h2>
                 <p class="lead">Professional muda yang berdedikasi dalam mengembangkan perusahaan</p>
             </div>
-
             <div class="row justify-content-center">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card card-modern text-center">
+                        <div class="card-body p-4">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3 overflow-hidden"
+                                style="width: 100px; height: 100px;">
+                                <img src="{{ asset('assets/nazwa.jpg') }}" alt="Nazwa Nurul Wijaya"
+                                    class="w-100 h-100 object-fit-cover"
+                                    onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-user fa-2x\'></i>';">
+                            </div>
+                            <h5 class="card-title">Nazwa Nurul Wijaya</h5>
+                            <p class="text-muted">Co-Founder & Marketing Manager</p>
+                            <p class="card-text">Mengelola pemasaran dan hubungan dengan pelanggan.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card card-modern text-center">
                         <div class="card-body p-4">
-                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3"
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3 overflow-hidden"
                                 style="width: 100px; height: 100px;">
-                                <i class="fas fa-user fa-2x"></i>
+                                <img src="{{ asset('assets/izza.jpg') }}" alt="Izzatir Rofi'ah"
+                                    class="w-100 h-100 object-fit-cover"
+                                    onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-user fa-2x\'></i>';">
                             </div>
                             <h5 class="card-title">Izzatir Rofi'ah</h5>
                             <p class="text-muted">Co-Founder & Operations Manager</p>
@@ -127,9 +144,11 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card card-modern text-center">
                         <div class="card-body p-4">
-                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3"
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3 overflow-hidden"
                                 style="width: 100px; height: 100px;">
-                                <i class="fas fa-user fa-2x"></i>
+                                <img src="{{ asset('assets/ircham.jpg') }}" alt="M. Ircham Daffansyah"
+                                    class="w-100 h-100 object-fit-cover"
+                                    onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-user fa-2x\'></i>';">
                             </div>
                             <h5 class="card-title">M. Ircham Daffansyah</h5>
                             <p class="text-muted">Co-Founder & Technical Director</p>
@@ -137,22 +156,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card card-modern text-center">
-                        <div class="card-body p-4">
-                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center text-white mb-3"
-                                style="width: 100px; height: 100px;">
-                                <i class="fas fa-user fa-2x"></i>
-                            </div>
-                            <h5 class="card-title">Nazwa Nurul Wijaya</h5>
-                            <p class="text-muted">Co-Founder & Marketing Manager</p>
-                            <p class="card-text">Mengelola pemasaran dan hubungan dengan pelanggan.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
     </section>
 
     <!-- Business Description -->
